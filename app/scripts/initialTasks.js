@@ -13,8 +13,8 @@
             console.log('domains---' + domains);
             // For multi tenant hosting
             if (domains[0] == "demo") {
-                $httpProvider.defaults.headers.common['Fineract-Platform-TenantId'] = 'default';
-                ResourceFactoryProvider.setTenantIdenetifier('default');
+                $httpProvider.defaults.headers.common['Fineract-Platform-TenantId'] = 'tn05';
+                ResourceFactoryProvider.setTenantIdenetifier('tn05');
                 console.log("demo server", domains[0]);
             } else {
                 $httpProvider.defaults.headers.common['Fineract-Platform-TenantId'] = domains[0];
@@ -37,8 +37,8 @@
             host = "https://" + queryLink.hostname + (queryLink.port ? ':' + queryLink.port : '');
             portNumber = queryLink.port;
 
-            $httpProvider.defaults.headers.common['Fineract-Platform-TenantId'] = 'default';
-            ResourceFactoryProvider.setTenantIdenetifier('default');
+            $httpProvider.defaults.headers.common['Fineract-Platform-TenantId'] = 'tn05';
+            ResourceFactoryProvider.setTenantIdenetifier('tn05');
             if (QueryParameters["tenantIdentifier"]) {
                 $httpProvider.defaults.headers.common['Fineract-Platform-TenantId'] = QueryParameters["tenantIdentifier"];
                 ResourceFactoryProvider.setTenantIdenetifier(QueryParameters["tenantIdentifier"]);
